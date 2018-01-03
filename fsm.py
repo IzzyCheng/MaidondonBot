@@ -116,6 +116,8 @@ class TocMachine(GraphMachine):
             money += 65
         elif text == 'E':
             money += 79
+        elif text == 'F':
+            money += 0
         else:
             update.message.reply_text("請輸入正確代號")
             return False
@@ -179,7 +181,8 @@ class TocMachine(GraphMachine):
         B. 清爽配餐（四季沙拉+33$冷/熱飲）----------$46\n\
         C. 酷炫配餐（冰旋風+33$冷/熱飲）------------$65\n\
         D. 勁脆配餐（麥脆雞+33$冷/熱飲）------------$65\n\
-        E. 豪邁配餐（無骨雞腿排+小薯+33$冷/熱飲）--$79")
+        E. 豪邁配餐（無骨雞腿排+小薯+33$冷/熱飲）--$79\n\
+        F. 不要配餐")
 
     def on_enter_state6(self, update):
         update.message.reply_text("送B\n1. 大杯可口可樂/可口可樂zero/雪碧\n2. 大杯冰紅茶/冰綠茶\n3. 蛋捲冰淇淋\n4. 經典冰咖啡\n5. 小杯焦糖熱奶茶/熱紅茶\n6. 小杯經典美式咖啡/熱巧克力")
